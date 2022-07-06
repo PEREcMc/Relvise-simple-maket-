@@ -148,9 +148,14 @@ body {
 }
 .main__whoweare {
 }
-.main__clients {
+.main__clients:not(:last-child) {
+	margin: 0px 0px 20px 0px;
 }
 .main__subscribe {
+}
+.main__getintouch {
+}
+.main__contact {
 }
 /* ----------------------------------------HEADER-BLOCK------------------------------------------- */
 
@@ -513,7 +518,7 @@ body {
 /* ----------------------------------------MAIN-WHOWEARE------------------------------------------- */
 
 .whoweare {
-	padding: 80px 0px 130px 0px;
+	padding: 100px 0px 130px 0px;
 	background-color: #fff;
 }
 .whoweare__container {
@@ -663,18 +668,261 @@ body {
 /* ----------------------------------------MAIN-SUBSCRIBE------------------------------------------- */
 
 .subscribe {
+	position: relative;
+	padding-bottom: 20px;
+}
+.subscribe::before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 77px;
+	background: #252B42;
+	z-index: -1;
+	
 }
 .subscribe__container {
 }
 .subscribe__body {
+	padding: 30px 50px;
+	align-items: center;
+	background: #17213C;
+	border-radius: 2px;
+}
+
+@media (min-width: 1070px) {
+	.subscribe__body {
+		margin: 0px 30px;
+	}
 }
 .subscribe__title {
+	flex: 0 1 50%;
+	font-weight: 700;
+	font-size: 24px;
+	line-height: 133%;
+	letter-spacing: 0.1px;
+	color: #fff;
+}
+@media (max-width: 810px) {
+	.subscribe__title {
+		margin-bottom: 20px;
+	}
+	.subscribe__body {
+		margin: 0px -15px;
+		padding: 20px 20px;
+	}
+}
+@media (min-width: 810px) {
+	.subscribe__body {
+		display: flex;
+		justify-content: space-between;
+	}
+	.subscribe__title {
+		max-width: 266px;
+	}
 }
 .subscribe__form {
+	flex: 0 1 50%;
+	display: flex;
+	align-items: center;
 }
 .subscribe__input {
+	flex: 1 1 auto;
+	width: 100%;
+	min-height: 58px;
+	padding: 0px 20px;
+	background: #F9F9F9;
+	border: 1px solid #E6E6E6;
+	border-radius: 5px 0px 0px 5px;
+	color: #737373;
+	font-family: inherit;
+	font-size: inherit;
+	border-right: 0;
+}
+.subscribe__input:focus {
+	color: #17213C;
 }
 .subscribe__button {
+	background: #FF7B47;
+	border: 1px solid #E6E6E6;
+	border-radius: 0px 5px 5px 0px;
+	display: flex;
+	max-height: 58px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	padding: 15px 22.5px;
+	font-weight: 400;
+	font-family: inherit;
+	font-size: inherit;
+	line-height: 200%;
+	letter-spacing: 0.2px;
+}
+@media (max-width: 810px) {
+	.subscribe__button {
+		padding: 15px 15px;
+	}
+	.subscribe__input {
+		padding: 0px 15px;
+	}
+}
+/* ---------------------------------------MAIN-GETINTOUCH------------------------------------------- */
+
+.getintouch {
+	padding: 80px 0px 135px 0px;
+}
+.getintouch__container {
+}
+.getintouch__header {
+	margin: 0px 0px 80px 0px;
+}
+.getintouch__items {
+	margin: 0px -15px;
+}
+.getintouch__item {
+	flex: 0 1 33.333%;
+}
+.item-getintouch {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	padding: 50px 15px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.item-getintouch_active {
+	background-color: #252B42;
+	color: #fff;
+	padding: 80px 15px;
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.item-getintouch_active .item-getintouch__button {
+	border: 1px solid #FFF;
+	color: #fff;
+}
+
+.item-getintouch__icon {
+
+}
+.item-getintouch > *:not(:last-child) {
+	margin-bottom: 15px;
+}
+.item-getintouch__emails {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.item-getintouch__email {
+	color: inherit;
+	font-weight: 600;
+	line-height: 150%;
+	font-size: 16px;
+}
+.item-getintouch__email:hover {
+	text-decoration: underline;
+}
+.item-getintouch__label {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 150%;
+}
+.item-getintouch__button {
+	min-height: 44px;
+	border-radius: 5px;
+	border: 1px solid #FF7B47;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #FF7B47;
+	line-height: 142%;
+	padding: 5px 20px;
+	font-weight: 600;
+	transition: all 0.3s ease 0s;
+}
+.item-getintouch__button:hover {
+	background-color: #FF7B47;
+	border: 1px solid #FF7B47;
+	color: #fff;
+}
+
+@media (min-width: 992px) {
+	.getintouch__items {
+		margin: 0;
+		display: flex;
+		align-items: center;
+	}
+}
+@media (max-width: 992px) {
+	.getintouch {
+		padding: 50px 0px;
+	}
+	.getintouch__header {
+		margin: 0px 0px 50px 0px;
+	}
+	.item-getintouch_active {
+		padding: 50px 15px;
+	}
+}
+@media (max-width: 767px) {
+	.getintouch__header {
+		margin: 0px 0px 30px 0px;
+	}
+}
+/* ---------------------------------------MAIN-CONTACT------------------------------------------ */
+
+.contact {
+	background-color: #fff;
+	padding: 42px 0px;
+}
+.contact__container {
+}
+.contact__content {
+	padding: 0px 0px 20px 0px;
+}
+@media (min-width: 767px) {
+	.contact__body {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.contact__content {
+		padding: 0px 20px 0px 0px;
+	}
+}
+.contact__title {
+	font-weight: 700;
+	font-size: 24px;
+	letter-spacing: 0.1px;
+	line-height: 133%;
+	color: #252B42;
+}
+.contact__title:not(:last-child) {
+	margin-bottom: 10px;
+}
+.contact__text {
+	color: #737373;
+	line-height: 142%;
+}
+.contact__button {
+	display: flex;
+	background: #FF7B47;
+	border-radius: 5px;
+	min-height: 58px;
+	padding: 5px 40px;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	color: #fff;
+	transition: background all 0.3s ease 0s;
+}
+.contact__button:hover {
+	background: #b93c0b;
+
 }
 /* ----------------------------------------ПОДВАЛ------------------------------------------- */
 .footer {
