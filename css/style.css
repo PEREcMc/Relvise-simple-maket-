@@ -124,6 +124,9 @@ body {
 	line-height: 171%;   /* (24/14) * 100 = 171 % */
 	font-weight: 600;
 }
+.menu__link:hover {
+	text-decoration: underline;
+}
 @media (max-width: 479px) {
 	.menu__link {
 		font-size: 18px;
@@ -247,6 +250,7 @@ body {
 	font-weight: 700;
 	line-height: calc(28/14 * 100%);
 	text-align: center;
+	transition: all 0.3s ease 0s;
 }
 @media (max-width: 479px) {
 	.main-block__button {
@@ -262,9 +266,17 @@ body {
 	background: #FF7B47;
 	color: #fff;
 }
+.main-block__button_orange:hover {
+	background: #fff;
+	color: #FF7B47;
+}
 .main-block__button_border {
 	border: 1px solid #0D5C63;
 	color: #0D5C63;
+}
+.main-block__button_border:hover {
+	color: #fff;
+	background-color: #0D5C63;
 }
 .main-block__image {
 	position: absolute;
@@ -753,12 +765,17 @@ body {
 	align-items: center;
 	text-align: center;
 	color: #fff;
+	cursor: pointer;
 	padding: 15px 22.5px;
 	font-weight: 400;
 	font-family: inherit;
 	font-size: inherit;
 	line-height: 200%;
 	letter-spacing: 0.2px;
+	transition: all 0.3s ease 0s;
+}
+.subscribe__button:hover {
+	background: #de4b11;
 }
 @media (max-width: 810px) {
 	.subscribe__button {
@@ -772,6 +789,7 @@ body {
 
 .getintouch {
 	padding: 80px 0px 135px 0px;
+	background: #F3F3F3;
 }
 .getintouch__container {
 }
@@ -876,7 +894,7 @@ body {
 /* ---------------------------------------MAIN-CONTACT------------------------------------------ */
 
 .contact {
-	background-color: #fff;
+	background-color: #FAFAFA;
 	padding: 42px 0px;
 }
 .contact__container {
@@ -921,12 +939,142 @@ body {
 	transition: background all 0.3s ease 0s;
 }
 .contact__button:hover {
-	background: #b93c0b;
+	background: #de4b11;
 
 }
-/* ----------------------------------------ПОДВАЛ------------------------------------------- */
+/* ----------------------------------------FOOTER----------------------------------------- */
 .footer {
 }
+.footer__top {
+	background: #17213C;
+	padding: 35px 0px;
+}
+.footer__main {
+}
+.footer__row {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+.footer__column {
+	padding: 15px 15px;
+	flex: 0 1 16.667%;
+}
+.footer__column:last-child {
+	flex: 0 1 33.334%;
+}
+@media (max-width: 992px) {
+	.footer__column {
+		flex: 0 1 25%;
+	}
+	.footer__column:last-child {
+		flex: 1 1 100%;
+	}
+}
+@media (max-width: 767px) {
+	.footer__column {
+		flex: 0 1 50%;
+	}
+}
+.footer__label {
+	color: #fff;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: 0.1px;
+	margin-bottom: 20px;
+}
+.footer__menu {
+}
+.menu-footer {
+}
+.menu-footer__list {
+}
+.menu-footer__item {
+}
+.menu-footer__item:not(:last-child) {
+	margin-bottom: 10px;
+}
+.menu-footer__link {
+	color: #FAFAFA;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 171%;
+	letter-spacing: 0.2px;
+}
+.menu-footer__link:hover {
+	text-decoration: underline;
+}
 
+.footer__contacts {
+}
+
+.contacts-footer {
+	display: flex;
+	flex-direction: column;
+}
+.contacts-footer__item {
+	padding: 0px 0px 0px 34px;
+	display: flex;
+	align-items: center;
+	min-height: 30px;
+	color: #FAFAFA;
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 171%;
+	letter-spacing: 0.2px;
+}
+.contacts-footer__item:hover {
+	text-decoration: underline;
+}
+.contacts-footer__item:not(:last-child) {
+	margin-bottom: 12px;
+}
+.contacts-footer__item_phone {
+	background: url('/img/footer/icon/icon-phone.svg') left no-repeat;
+}
+.contacts-footer__item_map {
+	background: url('/img/footer/icon/icon-map.svg') left no-repeat;
+}
+.contacts-footer__item_email {
+	background: url('/img/footer/icon/icon-email.svg') left no-repeat;
+}
+.footer__bottom {
+	padding: 25px 0px;
+	background: #FAFAFA;
+}
+@media (min-width: 767px) {
+	.footer__undermain {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}	
+}
+@media (max-width: 767px) {
+	.footer__copy {
+		text-align: center;
+		margin: 0px 0px 25px 0px;
+	}
+	.social{
+		justify-content: center;
+	}
+}
+.footer__copy {
+	color: #737373;
+	font-weight: 600;
+	line-height: 171%;
+	letter-spacing: 0.2px;
+}
+.footer__social {
+}
+.social {
+	display: flex;
+	align-items: center;
+}
+.social__item {
+}
+.social__item:not(:last-child) {
+	padding-right: 20px;
+}
 
 
